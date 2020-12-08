@@ -1,0 +1,37 @@
+<div>
+   
+ 
+      <table border="2">
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>select</th>
+        </tr>
+        <tr *ngFor="let l1 of List1">
+            <td>{{l1.Iname}}</td>
+            <td>{{l1.Price}}</td>
+            <td><input type="button" name="l1" (click)="add(l1)" value="add"></td>
+        </tr>
+    </table>
+    <hr>
+   <table  border="2">
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>select</th>
+        </tr>
+        
+        <tr *ngFor="let l2 of List2">
+            <td>{{l2.Iname}}</td>
+            <td>{{l2.Price}}</td>
+            <td><input type="button" name="l2" (click)="add(l2)" value="add"></td>
+        </tr>
+    </table>
+    <hr>
+    Amount:<input type="text" name="amt"[(ngModel)]="amt" >
+     <div *ngIf="flag1">Not Sufficient Amount </div>
+
+    <div (myamount)="return=$event" *ngIf="flag3" (flag)="flag3=$event">{{return}}</div>
+  
+    <selectitem *ngIf="flag"  [item]="pickitem" ></selectitem>
+</div>

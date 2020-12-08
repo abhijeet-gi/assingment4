@@ -1,0 +1,20 @@
+<div>
+    <table  border="2">
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Remove</th>
+        </tr>
+        
+       <tr *ngFor="let l2 of List">
+            <td>{{l2.Iname}}</td>
+            <td>{{l2.Price}}</td>
+            <td><button type="button" name="btn" (click)="remove(l2)">Remove</button></td>
+            
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td  colspan="2">{{amount}}</td>
+        </tr>
+    </table>
+</div>
